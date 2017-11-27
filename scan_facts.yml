@@ -20,6 +20,9 @@
     - name: "Scan Insights for Machine ID (Unix/Linux)"
       scan_insights:
       when: ansible_os_family != "Windows"
+    - name: "Scan subnets (Unix/Linux)"
+      scan_subnets:
+      when: ansible_os_family != "Windows"
 
     - name: "Scan packages (Windows)"
       win_scan_packages:
